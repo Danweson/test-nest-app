@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My NestJS App</title>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lora'
+            rel='stylesheet'>
+    </head>
+    <style type="text/css">
+
+.textPrimary, .textPrimary:hover {
+    color: #11467E;
+    /* font-size : 14px; */
+  }
+
+  .bgPrimary{
+    background-color: #11467E;
+  }
+
+</style>
+    <body>
+        <div class="container border p-4 mt-1">
+            <div class="row d-flex justify-content-center my-3 ">
+                <img src="http://localhost:3000/images/logo-kei.png" width="50"
+                    height="50" alt="My Image">
+            </div>
+                <div class="row">
+                    <h5>Bienvenu <b><%= name %></b> </h5>
+                </div>
+            <div class="row d-flex justify-content-center  mt-2">
+                <p class="">Confirmer votre compte en cliquant sur le bouton ci-dessous.
+                    Nous pourrons ainsi nous
+                    assurer que vos précieux rapports arrivent à la bonne
+                    adresse mail.
+                </p>
+                <div class="col-12 d-flex justify-content-center ">
+                    <button type="button" class="btn bgPrimary text-white my-2"
+                    style="border-radius: 10px;">Confirmez </button>
+                </div>
+                <div class="col-12 my-2">
+                    <p>
+                        Merci, <br />
+                        L'équipe KEI
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                Si vous rencontrez des problèmes, nous serons heureux de vous aider. Il suffit de nous envoyer un mail à  help@chapps.com et nous vous répondrons dès que possible.
+            </div>
+
+            <div class="row bgPrimary mt-2" style="height: 2.5em;">
+
+            </div>
+            <div class="row  d-flex justify-content-center">
+                <div class="mt-2 ">
+                    Copyright © 2024 KORV Estatement Inventory
+                </div>
+            </div>
+            <div class="row  d-flex justify-content-center">
+                <div class="mt-2 textPrimary">
+                    <a class="textPrimary" href="info@kei.com" >info@kei.com</a> <label>|</label> <a class="textPrimary" href="https://www.kei.com/">www.kei.com</a>
+                </div>
+            </div>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
