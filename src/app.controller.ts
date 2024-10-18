@@ -13,6 +13,48 @@ export class AppController {
     @Get("/home")
     @Render('index')
     root() {
-      return {name: "Christophe DANWE"}; 
+      return {fullname: "Christophe"}; 
+    }
+
+    @Get("/welcome")
+    @Render('welcome')
+    welcome() {
+      return {fullname: "Christophe"}; 
+    }
+
+    @Get("/invitation")
+    @Render('invitation')
+    invitation() {
+      return {fullname: "Christophe", team: "Team Danson SCI"}; 
+    }
+
+    @Get("/welcome-invitation")
+    @Render('welcome-invitation')
+    confInvitation() {
+      return {fullname: "Christophe", team: "Team Danson SCI"}; 
+    }
+
+    @Get("/password-forgotten")
+    @Render('password-forgotten')
+    passwordForgotten() {
+      return {fullname: "Christophe"}; 
+    }
+
+    @Get("/welcome-resetting-pwd")
+    @Render('welcome-resetting-pwd')
+    welcomeResettingPwd() {
+      return {fullname: "Christophe"}; 
+    }
+
+    @Get("/suspension")
+    @Render('suspension')
+   suspension() {
+      return {fullname: "Christophe", team: "Team Danson SCI"}; 
+    }
+
+    @Get("/revoking-suspension")
+    @Render('revoking-suspension')
+    revokingSuspension() {
+      return {fullname: "Christophe"}; 
     }
 }

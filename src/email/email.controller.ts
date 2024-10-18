@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { EmailService } from './email.service';
 import { CreateEmailDto } from './dto/create-email.dto';
 import { UpdateEmailDto } from './dto/update-email.dto';
@@ -7,33 +7,24 @@ import { UpdateEmailDto } from './dto/update-email.dto';
 export class EmailController {
   constructor(private readonly emailService: EmailService) {}
 
+  @Get('confirmation')
+  async confirmation() {
+    return await this.emailService.sendConfirmationMail();
+  }
+
   @Get('email')
-  welcome() {
-    return this.emailService.sendWelcomeMemberMail();
+  async welcome() {
+    return await this.emailService.sendWelcomeMail();
   }
 
-  @Get('createEmail')
-  create(@Body() createEmailDto: CreateEmailDto) {
-    return this.emailService.create(createEmailDto);
+  @Get('mail')
+  async welcome2() {
+    return await this.emailService.sendWelcome();
   }
 
-  @Get('findAllEmail')
-  findAll() {
-    return this.emailService.findAll();
+  @Post('emailSend')
+  async welcomeFirst() {
+    return await this.emailService.sendEmail("christophedanson90@gmail.com", "Welcome", "Good Morning !");
   }
 
-  @Get('findOneEmail')
-  findOne(@Param() id: number) {
-    return this.emailService.findOne(id);
-  }
-
-  @Get('updateEmail')
-  update(@Param() updateEmailDto: UpdateEmailDto) {
-    return this.emailService.update(updateEmailDto.id, updateEmailDto);
-  }
-
-  @Get('removeEmail')
-  remove(@Param() id: number) {
-    return this.emailService.remove(id);
-  }
 }

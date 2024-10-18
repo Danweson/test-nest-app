@@ -3,6 +3,9 @@ import { AppModule } from './app.module';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 import * as express from 'express';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 async function bootstrap() {
 
@@ -14,7 +17,8 @@ async function bootstrap() {
   app.setViewEngine('ejs');
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   
-
+  console.log('SMTP_USER:', process.env.MAILERSEND_USERNAME);
+  console.log('SMTP_PASS:', process.env.MAILERSEND_API_KEY);
   await app.listen(3000);
 }
 bootstrap();
